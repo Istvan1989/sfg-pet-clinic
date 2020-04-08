@@ -1,0 +1,5 @@
+com\istvansarhegyi\sfgpetclinic\model\Vet.class
+com\istvansarhegyi\sfgpetclinic\model\Owner.class
+com\istvansarhegyi\sfgpetclinic\model\PetType.class
+com\istvansarhegyi\sfgpetclinic\model\Pet.class
+com\istvansarhegyi\sfgpetclinic\model\Person.class
