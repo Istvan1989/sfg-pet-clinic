@@ -40,7 +40,7 @@ public class DataLoader implements CommandLineRunner {
         PetType savedDogPetType = petTypeService.save(dog);
 
         PetType cat = new PetType();
-        dog.setName("Cat");
+        cat.setName("Cat");
         PetType savedCatPetType = petTypeService.save(cat);
 
         Speciality radiology = new Speciality();
@@ -67,7 +67,7 @@ public class DataLoader implements CommandLineRunner {
         Pet mikesPet = new Pet();
         mikesPet.setPetType(savedDogPetType);
         mikesPet.setOwner(owner1);
-        mikesPet.setBirtDate(LocalDate.now());
+        mikesPet.setBirthDate(LocalDate.now());
         mikesPet.setName("Rosco");
         owner1.getPets().add(mikesPet);
 
@@ -78,13 +78,13 @@ public class DataLoader implements CommandLineRunner {
         owner2.setLastName("Fassbender");
         owner2.setAddress("123 Brickerel");
         owner2.setCity("Miami");
-        owner2.setTelephone("12312321");
+        owner2.setTelephone("12312212321");
 
         Pet mikes2pet = new Pet();
         mikes2pet.setPetType(savedCatPetType);
         mikes2pet.setName("Guliver");
         mikes2pet.setOwner(owner2);
-        mikes2pet.setBirtDate(LocalDate.now());
+        mikes2pet.setBirthDate(LocalDate.now());
         owner2.getPets().add(mikes2pet);
 
         ownerService.save(owner2);
@@ -94,7 +94,7 @@ public class DataLoader implements CommandLineRunner {
         catVisit.setDate(LocalDate.now());
         catVisit.setDescription("Sneezy kitty");
 
-        System.out.println("Loaded Owners....");
+        visitService.save(catVisit);
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Sam");
@@ -110,6 +110,5 @@ public class DataLoader implements CommandLineRunner {
 
         vetService.save(vet2);
 
-        System.out.println("Loaded Vets....");
     }
 }
