@@ -18,10 +18,6 @@
     <name>sfg-pet-clinic</name>
     <description>SFG Pet Clinic Project</description>
 
-    <properties>
-        <java.version>11</java.version>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
